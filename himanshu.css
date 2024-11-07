@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#112e42, #9ea729);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#9ea729, #112e42);
+}
+
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #9ea729; 
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 9%;
+  width: 100%;
+  background-color: #68731e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.header.sticky {
+  background: var(--bg-color);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+  background: url("../images/banner1.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content {
+  text-align: left;
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 4rem; 
+  margin-bottom: 10px; 
+  line-height: 1.2; 
+}
+
+.home-content h1 span {
+  color: #a3b818; 
+  font-weight: bold; 
+}
+
+.home-content p {
+  font-size: 1.6rem; 
+  margin: 2rem 0 4rem;
+}
+
+.text-animate {
+  display: inline-block; 
+  font-size: 2rem; 
+  color: white; 
+  font-weight: bold; /* Make the text bold */
+}
+
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34rem;
+  height: 5rem;
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn-box .btn:hover {
+  color: var(--main-color);
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 4rem;
+  width: 100%; /* Adjusted to full width to center icons properly */
+  display: flex;
+  gap: 1rem; /* Space between icons */
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  background: transparent;
+  border-radius: 50%;
+  border: 0.2rem solid var(--main-color);
+  font-size: 2rem; /* Adjust font size for better alignment */
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--second-bg-color);
+  padding-bottom: 6rem;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.about-img {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image is clipped to the container */
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  border-radius: 50%; /* Ensures the image itself is circular */
+  border: 0.2rem solid var(--main-color); /* Optional: adjusts the border around the image */
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items if the container width is not sufficient */
+  gap: 4rem; /* Space between each tool */
+  justify-content: center; /* Center align the tools */
+}
+
+.tool {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  width: 8rem; /* Adjust width as needed */
+}
+
+.tool img {
+  width: 100%;
+  height: 8rem; /* Adjust height as needed */
+  border-radius: 50%; /* Makes images circular */
+  object-fit: cover; /* Ensures the image covers the container */
+  border: 0.1rem solid var(--main-color); /* Optional: border around the images */
+}
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-player {
+  width: 50%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.video-wrapper:hover .video-player {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+  gap: 1rem; /* Space between items */
+}
+
+.video-item {
+  background: #112e42;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-item h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-item p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.services {
+  padding: 60px 5%; 
+  text-align: center;
+  background: var(--second-bg-color);
+}
+
+.services .heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.services-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.services-column {
+  flex-basis: calc(33.33% - 40px); 
+  margin: 0 20px 40px; 
+  padding: 3.8rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--main-color);
+  transition: transform 0.3s ease; 
+}
+
+.services-column:hover {
+  transform: scale(1.05); 
+}
+
+.services-column img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 0.8rem;
+}
+
+.contact {
+  padding-bottom: 7rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact .heading {
+  font-size: 2rem;
+}
+
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.column.right {
+  flex: 1;
+  padding: 20px;
+  background-color: #112e42; 
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.column.right:hover {
+  transform: scale(1.02); 
+}
+
+.column.right .text {
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+  color: var(--main-color); 
+}
+
+.column.right .fields {
+  display: flex; 
+  flex-direction: column; 
+}
+
+.column.right .field {
+  margin-bottom: 15px;
+}
+
+.column.right .field input,
+.column.right .field textarea {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  background-color: #f0f0f0; 
+  color: #333;
+}
+
+.column.right .button-area {
+  text-align: right; 
+}
+
+
+.column.right .button-area button {
+  background-color: var(--main-color); 
+  color: var(--bg-color);
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.column.right .button-area button:hover {
+  background-color: #a3b818; 
+  transform: scale(1.05);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--bg-color);
+}
